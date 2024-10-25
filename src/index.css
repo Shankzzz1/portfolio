@@ -1,3 +1,7 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -11,3 +15,35 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* App.css or Home.css */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: white;
+  }
+}
+
+.animate-typing {
+  display: inline-block;
+  overflow: hidden; /* Ensures text doesn't overflow the container */
+  white-space: nowrap; /* Prevents the text from wrapping */
+  border-right: 4px solid white; /* Creates the cursor effect */
+  width: 0; /* Start with zero width */
+  animation: typing 4s steps(40, end) forwards, blink-caret 0.75s step-end infinite; /* Adjust duration as needed */
+  animation-delay: 0s, 0s; /* Reset delay for the blink effect */
+  animation-iteration-count: infinite; /* Repeat infinitely */
+}
+
+
