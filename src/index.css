@@ -18,16 +18,19 @@ code {
 
 /* App.css or Home.css */
 @keyframes typing {
-  from {
+  0% {
     width: 0;
   }
-  to {
+  50% {
     width: 100%;
+  }
+  100% {
+    width: 0;
   }
 }
 
 @keyframes blink-caret {
-  from, to {
+  0%, 100% {
     border-color: transparent;
   }
   50% {
@@ -37,13 +40,12 @@ code {
 
 .animate-typing {
   display: inline-block;
-  overflow: hidden; /* Ensures text doesn't overflow the container */
-  white-space: nowrap; /* Prevents the text from wrapping */
-  border-right: 4px solid white; /* Creates the cursor effect */
-  width: 0; /* Start with zero width */
-  animation: typing 4s steps(40, end) forwards, blink-caret 0.75s step-end infinite; /* Adjust duration as needed */
-  animation-delay: 0s, 0s; /* Reset delay for the blink effect */
-  animation-iteration-count: infinite; /* Repeat infinitely */
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 4px solid white;
+  width: 0;
+  animation: typing 5s steps(40, end) infinite, blink-caret 0.75s step-end infinite;
 }
+
 
 
