@@ -5,15 +5,16 @@ import github from "../Images/social.png";
 import linkedin from "../Images/linkedin.png";
 import twitter from "../Images/twitter.png";
 import whatsapp from "../Images/whatsapp.png";
-// import man from '../Images/man.png'; // Import your profile image
-// import './Home.css'; // Import your CSS file
+import Modelviewer from "./ModelViewer";
 
 export default function Home() {
   return (
     <>
       <Navbar />
-      <div className="relative p-12">
-        <div className="absolute left-80 top-32 text-lg space-y-5">
+      <div className="flex p-12 space-x-8 mt-20"> {/* Flex container to align items side-by-side */}
+        
+        {/* Left Content Section */}
+        <div className="text-lg space-y-5 w-1/2 bg- relative left-64"> {/* Set width to manage space */}
           <p className="text-2xl">Software Developer</p>
           <div className="flex items-center">
             <p className="text-6xl">Hello, I'm</p>
@@ -36,14 +37,12 @@ export default function Home() {
             </button>
 
             <a href="https://github.com/Shankzzz1">
-              {" "}
               <img src={github} alt="GitHub" className="w-8 h-8" />
             </a>
             <a href="https://linkedin.com/in/shashank-gavale-041148261">
               <img src={linkedin} alt="LinkedIn" className="w-8 h-8" />
             </a>
             <a href="https://x.com/1_Shankzzz">
-              {" "}
               <img src={twitter} alt="Twitter" className="w-8 h-8" />
             </a>
             <a
@@ -54,10 +53,17 @@ export default function Home() {
               <img src={whatsapp} alt="WhatsApp" className="w-8 h-8" />
             </a>
           </div>
-          <div className="relative top-20">
-            <Counter />
-          </div>
         </div>
+        
+        {/* Right Model Section */}
+        <div className="flex justify-center items-center w-1/2 ">
+          <Modelviewer />
+        </div>
+      </div>
+
+      {/* Counter positioned below the Flex container */}
+      <div className="mt-12 flex justify-center">
+        <Counter />
       </div>
     </>
   );
