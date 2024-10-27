@@ -9,6 +9,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  padding-top: 2.5rem;
+  padding-left: 6rem;
+  padding-right: 6rem;
 }
 
 code {
